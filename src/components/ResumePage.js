@@ -1,4 +1,4 @@
-import { Interests, UserEducation } from "./UserInfo";
+import { Interests, UserEducation, UserSkills } from "./UserInfo";
 import "./ResumePage.css";
 
 function ResumePage({ personName }) {
@@ -21,10 +21,7 @@ function ResumePage({ personName }) {
 
         <div>
           <Interests userInterests={userInterestsArray}></Interests>
-          <h4 className="titleHeading">Skills</h4>
-          <ul>
-            <li>Web Design with HTML & CSS</li>
-          </ul>
+          <UserSkills userSkills={["Web Design with HTML & CSS"]}></UserSkills>
 
           <UserEducation
             userEducation={[

@@ -18,4 +18,13 @@ function UserEducation({ userEducation }) {
   );
 }
 
-export { Interests, UserEducation };
+function UserSkills({ userSkills }) {
+  return (
+    <div>
+      <h4 className="titleHeading">Skills</h4>
+      <DynamicList items={userSkills}></DynamicList>
+    </div>
+  );
+}
+
+export { Interests, UserEducation, UserSkills };
