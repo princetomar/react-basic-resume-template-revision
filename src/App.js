@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import ResumePage from "./components/ResumePage";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="mainHeadingContainer">
+        <div className="mainLeftSideBorder"></div>
+        <div className="mainRightSideBorder"></div>
+      </div>
+
+      <ResumePage personName="Emily"></ResumePage>
     </div>
   );
 }

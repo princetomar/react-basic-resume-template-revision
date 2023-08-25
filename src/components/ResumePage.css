@@ -1,0 +1,12 @@
+.resumeContainer{
+    display: inline-block;
+    margin-top: 6px;
+    margin-left: 40px;
+    height: 1000px;
+    width: 75%;
+
+    .titleHeading{
+        font-weight: lighter;
+        font-size: large;
+    }
+}
