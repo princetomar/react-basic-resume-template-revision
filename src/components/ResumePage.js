@@ -1,5 +1,6 @@
-import { Interests, UserEducation, UserSkills } from "./UserInfo";
+// import { Interests, UserEducation, UserSkills } from "./UserInfo";
 import "./ResumePage.css";
+import DynamicList from "./DynamicList";
 
 function ResumePage({ personName }) {
   const userInterestsArray = [
@@ -20,7 +21,7 @@ function ResumePage({ personName }) {
         <br></br>
 
         <div>
-          <Interests userInterests={userInterestsArray}></Interests>
+          {/* <Interests userInterests={userInterestsArray}></Interests>
           <UserSkills userSkills={["Web Design with HTML & CSS"]}></UserSkills>
 
           <UserEducation
@@ -29,20 +30,39 @@ function ResumePage({ personName }) {
               "Silvermine School of Arts",
               "Codeacademy",
             ]}
-          ></UserEducation>
+          ></UserEducation> */}
 
-          <h4 className="titleHeading">Experience</h4>
-          <ul>
-            <li>Student Technology Intern for Wilton School District</li>
-            <li>Babysitter</li>
-          </ul>
+          <DynamicList
+            items={userInterestsArray}
+            itemName={"Interests"}
+          ></DynamicList>
 
-          <h4 className="titleHeading">Extracurriculars</h4>
-          <ul>
-            <li>Recycling Club</li>
-            <li>Gardening Club</li>
-            <li>Book Club</li>
-          </ul>
+          <DynamicList
+            items={[
+              "Wilton High School",
+              "Silvermine School of Arts",
+              "Codeacademy",
+            ]}
+            itemName={"Education"}
+          ></DynamicList>
+
+          <DynamicList
+            items={["Web Design with HTML & CSS", "Mobile App Development"]}
+            itemName={"Skills"}
+          ></DynamicList>
+
+          <DynamicList
+            items={[
+              "Student Technology Intern for Wilton School District",
+              "Babysitter",
+            ]}
+            itemName={"Experience"}
+          ></DynamicList>
+
+          <DynamicList
+            items={["Recycling Club", "Gardening Club", "Book Club"]}
+            itemName={"Extracurriculars"}
+          ></DynamicList>
         </div>
       </div>
     </div>
