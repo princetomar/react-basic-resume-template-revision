@@ -1,6 +1,6 @@
 // import { Interests, UserEducation, UserSkills } from "./UserInfo";
 import "./ResumePage.css";
-import DynamicList from "./DynamicList";
+import DynamicList from "./dynamicLists/DynamicList";
 
 function ResumePage({ personName }) {
   const userInterestsArray = [
@@ -21,20 +21,10 @@ function ResumePage({ personName }) {
         <br></br>
 
         <div>
-          {/* <Interests userInterests={userInterestsArray}></Interests>
-          <UserSkills userSkills={["Web Design with HTML & CSS"]}></UserSkills>
-
-          <UserEducation
-            userEducation={[
-              "Wilton High School",
-              "Silvermine School of Arts",
-              "Codeacademy",
-            ]}
-          ></UserEducation> */}
-
           <DynamicList
             items={userInterestsArray}
             itemName={"Interests"}
+            layout={"bullet"}
           ></DynamicList>
 
           <DynamicList
@@ -44,6 +34,7 @@ function ResumePage({ personName }) {
               "Codeacademy",
             ]}
             itemName={"Education"}
+            layout={"alpha"}
           ></DynamicList>
 
           <DynamicList
