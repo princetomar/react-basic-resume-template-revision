@@ -1,6 +1,7 @@
 // import { Interests, UserEducation, UserSkills } from "./UserInfo";
 import "./ResumePage.css";
 import DynamicList from "./dynamicLists/DynamicList";
+import PrintButton from "./printButtons/PrintButton";
 
 function ResumePage({ personName }) {
   const userInterestsArray = [
@@ -54,6 +55,8 @@ function ResumePage({ personName }) {
             items={["Recycling Club", "Gardening Club", "Book Club"]}
             itemName={"Extracurriculars"}
           ></DynamicList>
+
+          <PrintButton></PrintButton>
         </div>
       </div>
     </div>
